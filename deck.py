@@ -31,8 +31,8 @@ class Deck:
 
     def shuffle(self):
         """
-            Using the random.shuffle method, this function should a deck of
-            52 Cards that have been randomly assorted.
+            Using the random.shuffle method, this function should return a deck
+            of 52 Cards that have been randomly assorted.
         """
         return random.shuffle(self.cards)
 
