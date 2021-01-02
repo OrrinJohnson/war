@@ -21,11 +21,11 @@ class Card:
 
     def set_face_cards(self):
         """
-            Set up the face cards. The values of the cards need to remain
-            numerical values but, as with most analog card games, cards with
-            values higher than 10 are not referred to as 11, 12 etc, rather,
-            Jack, Queen, King and Ace, if the Ace card is determined to be
-            not the lowest ranking card.
+            Set up the title for the cards. The values of the cards need
+            to remain numerical values but, as with most analog card games,
+            cards with values higher than 10 are not referred to as 11, 12 etc,
+            rather, Jack, Queen, King and Ace, if the Ace card is determined to
+            be not the lowest ranking card.
         """
         if self.value <= 10:
             self.title = self.value
