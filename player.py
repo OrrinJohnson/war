@@ -15,7 +15,7 @@ class Player:
     def __init__(self, name):
         self.name = name
         self.hand = []
-        self.cards_player = []
+        self.cards_played = []
         self.cards_won = []
 
     def draw_card(self, deck):
@@ -33,4 +33,4 @@ class Player:
         """
         played_card = self.hand.pop(0)
         print(f"{self.name} played the "), played_card.show()
-        self.played_cards.append(played_card)
+        self.cards_played.append(played_card)
