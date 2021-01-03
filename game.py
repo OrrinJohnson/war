@@ -1,7 +1,9 @@
 from player import Player, deck
+from helpers import clear
 
 
 def start_game():
+    war = False
     name = input("What is your name?  ")
     player = Player(name)
     computer = Player("Computer")
@@ -25,16 +27,18 @@ def start_game():
                 print(f"{player.name} wins the round!")
                 player.cards_won.append(computer.cards_played[-1])
                 player.cards_won.append(player.cards_played[-1])
+                clear()
 
             elif computer.cards_played[-1].value > player.cards_played[-1].value:
                 print(f"{computer.name} wins the round!")
                 computer.cards_won.append(player.cards_played[-1])
                 computer.cards_won.append(computer.cards_played[-1])
+                clear()
 
             else:
                 print("WAR!")
-
-    round()
+    while len(player.hand) > 1 and len(computer.hand) > 1 and not war:
+        round()
 
 
 start_game()
