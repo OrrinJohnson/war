@@ -17,6 +17,7 @@ class Player:
         self.hand = []
         self.cards_played = []
         self.cards_won = []
+        self.war_cards = []
 
     def draw_card(self, deck):
         self.hand.append(deck.draw_card())
