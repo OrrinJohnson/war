@@ -1,7 +1,9 @@
 from deck import Deck
+from table import Table
 
 
 deck = Deck()
+table = Table()
 
 
 class Player:
@@ -14,10 +16,9 @@ class Player:
     """
     def __init__(self, name):
         self.name = name
-        self.hand = []
-        self.cards_played = []
         self.cards_won = []
-        self.war_cards = []
+        self.hand = []
+        self.played_card = ''
 
     def draw_card(self, deck):
         self.hand.append(deck.draw_card())
@@ -32,6 +33,6 @@ class Player:
             from their hand against their opponent's card. This card should be
             taken from the top of the player's card stack (beginning of list).
         """
-        played_card = self.hand.pop(0)
-        print(f"{self.name} played the "), played_card.show()
-        self.cards_played.append(played_card)
+        self.played_card = self.hand.pop(0)
+        print(f"{self.name} played the "), self.played_card.show()
+        table.cards.append(self.played_card)
